@@ -13,7 +13,11 @@ for (const item of galleryItems) {
 }
 
 
-lightboxInstance = new SimpleLightbox('.gallery__item a');
+lightboxInstance = new SimpleLightbox(".gallery__item a", {
+  captions: true, 
+  captionDelay: 250,
+  captionSelector: "alt",
+});
 
 
 galleryBox.addEventListener("click", (event) => {
